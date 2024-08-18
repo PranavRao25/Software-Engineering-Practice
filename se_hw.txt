@@ -1,0 +1,53 @@
+interface iSecurityProvider {
+	void Scan();
+}
+
+public class AntiVirusSecurityProvider:iSP {
+	public void Scan() {
+	}
+}
+
+...
+
+
+public class HomeScreen {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Input the system to scan");
+		System.out.println("1. Filesystem");
+		System.out.println("2. Account");
+		System.out.println("3. Network");
+		System.out.println("4. App & Browser");
+		System.out.println("5. ...");
+		
+		int c = Integer.parseInteger(sc.nextLine());
+		iSP provider = ProviderFactory(c);
+		provider.scan();
+	}
+	
+	private static list<iSP> ProviderFactory(int c) {
+		List<iSP> provider = new List<iSP>;
+		
+		switch(c) {
+			case 1:
+				provider.add(new);
+				break;
+			case 2:
+				provider.add(new);
+				break;			
+			case 3:
+				provider.add(new);
+				break;			
+			case 4:
+				provider.add(new);
+				break;			
+			case 5:
+				provider.add(new);
+				break;			
+			default:
+				raise Exception();
+		}
+		return provider;
+	}
+}
