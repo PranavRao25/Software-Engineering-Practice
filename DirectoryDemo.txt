@@ -1,0 +1,50 @@
+DirectoryDemo:
+
+LVL 2
+Console Program:
+<command> <file/dir name>
+move <src>/<name> <dest>
+create <src>/<name>
+delete <src>/<name>
+open <src>/<name>
+rename <src>/<name>
+search <name>
+
+LVL 1
+DirectoryReader:
+<will have a graph data structure inside it to navigate>
+move - move a file/dir from one place to another (cannot move into file)
+create - create a dir/file
+delete - delete a dir/file
+rename - rename a dir/file
+open - list out the contents of a dir/file
+search - search for a file/dir whose name is a superset of the provided name
+
+LVL 0
+IStorage:
+name
+parent_dir
+contents
+type
+
+FileClass:
+type = 0
+
+DirectoryClass:
+type = 1
+
+TODO
+1. access a particular file within it
+2. modify that file
+3. list out all files within it
+4. delete a file
+5. delete a dir
+6. create a file
+7. create a dir
+8. rename a file
+9. rename a dir
+10. access a particular dir
+11. perform a fuzzy search for a file
+12. perform a fuzzy search for a dir
+13. move a file
+14. move a dir
