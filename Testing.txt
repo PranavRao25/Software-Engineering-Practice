@@ -8,3 +8,6 @@ checked keyword in C# will throw exception if any code within its block has an o
 checked {
   ...
 }
+
+Factory requires you to provide all details during initiliasiation.
+When you are using the Builder, you can specify each item on demand. 
