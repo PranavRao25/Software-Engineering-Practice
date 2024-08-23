@@ -1,0 +1,10 @@
+Error Testing:
+Functionality
+Boundary
+Stress
+Locality
+
+checked keyword in C# will throw exception if any code within its block has an overflow.
+checked {
+  ...
+}
