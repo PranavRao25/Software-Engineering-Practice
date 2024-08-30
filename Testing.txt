@@ -31,3 +31,25 @@ PUSH CODE TO THE CLOUD
 pEOPLE WILL ACCESS IT BY REST APIS
 MAY GET CHARGED
 
+23 Design Patterns:
+1. Creational: creation of objects
+2. Structural: Class structure such as inheritance and composition
+3. Behaviorial: Interaction between objects
+
+Creational:
+1. Singleton - Restricts the initilization of a class to ensure that only one instance of the class can be created
+2. Factory - Takes out the responsibility of instantiating an object from a class to a Factory class
+3. Abstract Factory - Factory for factory classes
+4. Builder - Creating an object step-by-step and returning it
+5. Prototype - Forking an object into our requirements
+
+Structural:
+1. Adapter - Wrapper
+2. Composite - Used to implement a part-whole hierarchy
+3. Proxy - Provide a surrogate / placeholder for another object to control access it
+4. Flyweight - Caching & Reusing object instances, used with immutable objects.
+5. Facade - Creating a wrapper interfaces on top of existing interfaces
+6. Bridge - Decouple interfaces from implementation (abstraction)
+7. Decorator - Modify the functionality of an object during runtime
+
+Behavioral:
