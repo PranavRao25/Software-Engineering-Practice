@@ -11,3 +11,23 @@ checked {
 
 Factory requires you to provide all details during initiliasiation.
 When you are using the Builder, you can specify each item on demand. 
+
+OOD
+Design Patterns
+IPC
+Multi-threading
+
+socket manager
+RPC
+chunk manager
+
+sERIALIZATION OF DATA FOR PERSISTANCE
+
+Cloud:
+AZURE
+SET UP A CLOUD
+SAMPLE CODE PRESENT
+PUSH CODE TO THE CLOUD
+pEOPLE WILL ACCESS IT BY REST APIS
+MAY GET CHARGED
+
