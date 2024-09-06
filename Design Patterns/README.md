@@ -35,7 +35,7 @@
 ## Singleton:
 <img src="singleton.png"
      alt="singleton"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Ensures only one instance of a class is present globally
 Used in Facade, Builder, Abstract Factory, Prototype
 Application: Logging, Thread Pool
@@ -72,7 +72,7 @@ public class ThreadSafeSingleton {
 ## Factory
 <img src="factory.png"
      alt="factory"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Used when we have a superclass with multiple subclasses and based on input we need to return one of the subclass.
 Say we have a superclass __A__, and its child classes __B__ & __C__:
 
@@ -94,7 +94,7 @@ public class Factory {
 ## Abstract Factory:
 <img src="abstract.png"
      alt="abstract"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 We have a factory class for each sub-class
 So the abstract factory class will return the subclass based on input factory class
 It is easy to accomodate more types than Factory
@@ -137,7 +137,7 @@ public class ServerFactory extends ComputerAbstractFactory {
 ## Builder:
 <img src="builder.png"
      alt="builder"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Too many arguments are passed from Client to create objects
 We incorporate a builder to construct complex objects step-by-step
 We can use a director which can provide further diversity of the objects
@@ -191,7 +191,7 @@ public class Director {
 ## Prototype:
 <img src="prototype.png"
      alt="prototype"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Used when object creation is costlier than just copying a similar object (eg we want to copy a large database)
 
 ```
@@ -210,7 +210,7 @@ public class Rectangle extends Shape {
 ## Adapter:
 <img src="abstract.png"
      alt="abstract"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Used when two interfaces are incompatible, so we have an adapater which can bridge them both
 
 ```
@@ -244,7 +244,7 @@ public class SocketAdapter implements ISocketAdapter {
 ## Composite:
 <img src="composite.png"
      alt="composite"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Composes objects into tree structure (build an objects using other smaller objects)
 Useful only in cases when the application can be modeled as a tree
 We have a common interface for both leaves and nodes
@@ -283,7 +283,7 @@ public class Node implements Component {
 ## Proxy:
 <img src="proxy.png"
      alt="proxy"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 To provide appropriate control over a class to the client/other classes
 
 ```
@@ -329,7 +329,7 @@ public class Proxy implements IService {
 ## Flyweight:
 <img src="flyweight.png"
      alt="flyweight"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Use sharing to support large number of fine-grained objects efficiently (in terms of time and space)
 
 The object properties are divided into 2 types:
@@ -403,7 +403,7 @@ public class ContextAggregate {
 ## Facade:
 <img src="facade.png"
      alt="facade"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Provides a simplified interface to a set of classes
 ```
 public class TextDatabase {
@@ -457,7 +457,7 @@ public class Database {
 ## Template Method:
 <img src="template.png"
      alt="template"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Provides a skeleton for implementing a process, with explicitly mentioning the steps but leaving the actual implementation to the subclasses
 ```
 abstract class SoftwareTemplate {
@@ -477,7 +477,7 @@ abstract class SoftwareTemplate {
 ## Mediator:
 <img src="mediator.png"
      alt="mediator"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Acts like a communicator between objects, where objects are only allowed to communicate with the mediator and not directly
 ```
 
@@ -486,7 +486,7 @@ Acts like a communicator between objects, where objects are only allowed to comm
 ## Chain of Responsibility:
 <img src="chain.png"
      alt="chain"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Here we set an order of calling and execution between classes, where each class will define its successor; each class has two options: either handle a request or pass it on to its successor
 ```
 interface IHandler {
@@ -520,7 +520,7 @@ class Program {
 ## Observer:
 <img src="observer.png"
      alt="observer"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Used when you are interested in the state of an object and you wish to get notified for the same
 ```
 interface ISubscriber {
@@ -549,7 +549,7 @@ class Publisher {
 ## Strategy:
 <img src="strategy.png"
      alt="strategy"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Used when you have multiple algorithms to perform a task, so you make the client pass their desired choice.
 ```
 interface IStrategy {
@@ -578,12 +578,12 @@ class ConcreteStrategy implements Strategy {
 ## Command:
 <img src="command.png"
      alt="command"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 
 ## State:
 <img src="state.png"
      alt="state"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 An object could go through various states (like FSM), each state having different implementations of the same functions and identified by different properties. Create a class for each state.
 ```
 interface IState {
@@ -621,7 +621,7 @@ class Context {
 ## Visitor:
 <img src="visitor.png"
      alt="visitor"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Used when we have to perform an operation of a set of objects (whose classes cannot be modified); so we traverse/use the objects
 ```
 interface IVisitor {
