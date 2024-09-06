@@ -125,7 +125,9 @@ Model has proper business logic
 View presenting content
 Controller connects View and Model
 
-!(MVC)[mvc.png]
+<img src="mvc.png"
+     alt="MVC"
+     style="float: left; margin-right: 10px;" />
 
 ### Model View Presenter
 Derivative of MVC
@@ -133,7 +135,9 @@ Presenter is alias to Controller
 Instead of having view directly interacting with model, it interacts only with the presenter
 
 
-!(MVP)[mvp.png]
+<img src="mvp.png"
+     alt="MVP"
+     style="float: left; margin-right: 10px;" />
 
 #### Data Binding
 Binds and synchronises data source from provider and consumer together
