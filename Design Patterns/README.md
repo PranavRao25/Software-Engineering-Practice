@@ -653,6 +653,6 @@ class ElementA {
 ## Iterator:
 <img src="iterator.png"
      alt="iterator"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /><br>
 Lets you traverse a collection of objects without knowing its internal representation
 
