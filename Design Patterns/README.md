@@ -208,8 +208,8 @@ public class Rectangle extends Shape {
 ```
 
 ## Adapter:
-<img src="abstract.png"
-     alt="abstract"
+<img src="adapter.png"
+     alt="adapter"
      style="float: left; margin-right: 10px;" /><br>
 Used when two interfaces are incompatible, so we have an adapater which can bridge them both
 
