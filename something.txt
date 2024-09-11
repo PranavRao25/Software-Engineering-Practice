@@ -1,0 +1,12 @@
+PR review
+Boards
+Queries
+Pipelines
+We are using waterfall 
+
+Mock object testing
+Do we add a decorator on top of the factory to decide if it is production mode or testing mode?
+Create a mock cloud object
+
+No need to because mock is created by the unit tester. Instead of a decorator, we can use namespaces like Mockup.Networking
+
