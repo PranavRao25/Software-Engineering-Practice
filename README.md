@@ -144,3 +144,40 @@ Binds and synchronises data source from provider and consumer together
 
 ### Model View ViewModel
 ViewModel is a mediator which automates the communication between View and Model through Data Binding
+
+# Multi-Threading and Inter Process Communication
+
+## Multithreading
+
+| Benefits | Challenges |
+| :----    | :----      |
+| Concurrency & increased throughput | Complex & Leads to conflicts |
+| Improve UI Responsiveness | Race conditions, Starvation & Deadlock |
+| Multicore friendly | Priority inversion |
+
+In short, if you know what you are doing while using appropriate libraries, it is possible to mitigate some of the problems mentioned above
+
+### GUI and Threading
+
+There is a main GUI thread which interacts with the elements on the screen
+The rest of the worker threads do not interact with it, and instead respond back to GUI thread
+
+### Different Methods of Synchronisation
+<ol>
+    <li>Mutex</li>
+    <li>Critical Sections</li>
+    <li>Semaphores</li>
+    <li>Monitor/Locks</li>
+    <li>Events</li>
+</ol>
+
+## Interprocess Communication
+
+TO communicate between applications either in the same devices or different devices
+Applications are classified as servers or clients. A client is the application which initiates the communication and the server is the application which accepts the communication. Each application is not exclusively client or server and can be either/both of them
+
+IPC is classified in how objects communicate cross-process
+<ol>
+    <li>Inter Object Communication</li>
+    <li>Serialization</li>
+</ol>
