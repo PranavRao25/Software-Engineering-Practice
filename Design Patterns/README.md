@@ -3,14 +3,14 @@
 2. Structural: Class structure such as inheritance and composition
 3. Behaviorial: Interaction between objects
 
-### Creational:
+## Creational:
 1. Singleton - Restricts the initilization of a class to ensure that only one instance of the class can be created
 2. Factory - Takes out the responsibility of instantiating an object from a class to a Factory class
 3. Abstract Factory - Factory for factory classes
 4. Builder - Creating an object step-by-step and returning it
 5. Prototype - Forking an object into our requirements
 
-### Structural:
+## Structural:
 1. Adapter - Interface between two unrelated entities so that they can work together
 2. Composite - Used to implement a part-whole hierarchy
 3. Proxy - Provide a surrogate / placeholder for another object to control access it
@@ -19,7 +19,7 @@
 6. Bridge - Decouple interfaces from implementation (abstraction)
 7. Decorator - Modify the functionality of an object during runtime
 
-### Behavioral:
+## Behavioral:
 1. Chain of Responsibility - Used to achieve loose coupling in software design where a request from client is passed to a chain of objects to process them
 2. Command - Used to implement loose coupling in a request-response model
 3. Interpreter - defines a grammatical representation for a language and provide an interpreter to deal with this grammar
@@ -31,6 +31,13 @@
 9. Strategy - Used when we have multiple algorithms for a specific task and client decides the actual implementation to be used at runtime
 10. Template Method - Used to create a template method stub and defer some of steps of implementation to subclasses
 11. Visitor - Used when we have to perform an operation on a group of similiar kind of objects
+
+## Mnemonic for remembering the design patterns:
+<ol>
+     <li>Creational: PS FAB</li>
+     <li>Structural: ABCD FFP</li>
+     <li>Behavioral: CC II MM O; SS T V</li>
+</ol>
 
 ## Singleton:
 <img src="singleton.png"
