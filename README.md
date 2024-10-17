@@ -168,3 +168,11 @@ The rest of the worker threads do not interact with it, and instead respond back
     <li>Monitor/Locks</li>
     <li>Events</li>
 </ol>
+
+
+```
+_listenThread = new(new ThreadStart(ListenerThreadProc))
+{
+    IsBackground = true // Stop the thread when the main thread stops.
+};
+```
