@@ -176,3 +176,5 @@ _listenThread = new(new ThreadStart(ListenerThreadProc))
     IsBackground = true // Stop the thread when the main thread stops.
 };
 ```
+
+```lock``` keyword is used to setup a critical section in the code.
