@@ -24,24 +24,24 @@ Named Pipes, Sockets, UDP/TCP clients use this method
 static void RunServer() {
     const int port = 0;
     IPAddress localAddr = IPAddress.Parse("");
-    TcpListener server = new TcpListener(localAddr, port);
+    TcpListener server = new TcpListener(localAddr, port);  /// Setup server
 
     server.Start();
 
-    byte[] bytes = new byte[256];
+    byte[] bytes = new byte[256];  /// Input buffer of server
 
     int running = True;
     const string quit = "quit";
     while(running) {
-        using(TcpClient client = new TcpClient()) {
-            using(NetworkStream stream = client.GetStream()) {
+        using(TcpClient client = new TcpClient()) {  /// TCP Connection established with Client
+            using(NetworkStream stream = client.GetStream()) {  /// Get input stream from client
                 int i;         
                 do {
                     i = stream.Read(bytes, 0, bytes.length);
                     string input = Encoding.ASCII.GetString(bytes, 0, i);
                     processing = !input.Equals(quit);
 
-                    if(!string.IsNullOrEmpty(input) && processing) {
+                    if(!string.IsNullOrEmpty(input) && processing) {  /// if client request is not null or not FIN
                         string reply = GetSerializedReply();
                         byte[] output = Encoding.ASCII.GetBytes(reply);
                         stream.Write(output, 0, output.Length);
