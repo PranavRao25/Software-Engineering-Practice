@@ -26,13 +26,23 @@
 - - Abstract methods cannot have an implementation in the abstract class
 - async
 - const:
-- event
+- - always implicitly declared as static
+- - done during compile time
+- event:
+- - 
 - extern
 - new
 - override
-- partial
-- readonly
-- sealed
+- partial:
+- - partial lets you to split the class/struct/interface definition across multiple files
+- - all partial definitions must be in the same assembly or namespace
+- - all parts should have same access modifier
+- - if any part is declared abstract/sealed, the whole type is declared abstract/sealed
+- - if any part uses a base type, the whole type inherits the base type.
+- readonly:
+- - done during runtime
+- sealed: used to prevent inheritance and being overridden of methods
+- - you cannot seal a method unless it is overridding a virtual methods
 - static
 - unsafe
 - virtual
