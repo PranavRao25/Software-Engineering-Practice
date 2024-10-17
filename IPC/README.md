@@ -9,6 +9,8 @@ IPC is classified in how objects communicate cross-process
     <li>Serialization</li>
 </ol>
 
+For IPC, we must first prepare the structure of the communicated object. The Communicated Class has to be decorated as Serializable.
+
 ### Serialization
 
 Here we convert the data into bytes/json/xml type object and send it to the process (this is called serialization)
@@ -17,6 +19,41 @@ We can also choose to persist the data
 JSON can serialise all data, XML will serialize only public members, Binary will serialize complete state of the object and is useful when you want to share the object on disk, memory, or elsewhere
 The server will convert the received object and deserialize it (de-serialization)
 Named Pipes, Sockets, UDP/TCP clients use this method
+
+```
+static void RunServer() {
+    const int port = 0;
+    IPAddress localAddr = IPAddress.Parse("");
+    TcpListener server = new TcpListener(localAddr, port);
+
+    server.Start();
+
+    byte[] bytes = new byte[256];
+
+    int running = True;
+    const string quit = "quit";
+    while(running) {
+        using(TcpClient client = new TcpClient()) {
+            using(NetworkStream stream = client.GetStream()) {
+                int i;         
+                do {
+                    i = stream.Read(bytes, 0, bytes.length);
+                    string input = Encoding.ASCII.GetString(bytes, 0, i);
+                    processing = !input.Equals(quit);
+
+                    if(!string.IsNullOrEmpty(input) && processing) {
+                        string reply = GetSerializedReply();
+                        byte[] output = Encoding.ASCII.GetBytes(reply);
+                        stream.Write(output, 0, output.Length);
+                    }
+    `           } while(i!=0);
+            }
+        }
+    }
+
+    server.Stop();
+}
+```
 
 ### Inter Object Communication
 
