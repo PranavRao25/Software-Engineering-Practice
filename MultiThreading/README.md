@@ -65,8 +65,8 @@ private readonly object _synclock = new ();
 private int _totalValueSynchronisation = 0;
 
 public void AddOneThousandSynchronisation() {
-    for(int i=0;i<1000;i++) {
-        lock(_synclock) {
+    lock(_synclock) {
+        for(int i=0;i<1000;i++) {
             _totalValueSynchronisation++;
         }
     }
