@@ -15,12 +15,17 @@
 2. Reference Types:
 - class, interface, object, string
 - Arrays
-- delegate
+- delegate:
+- - provide an interface-like feature for methods which has the same parameter list and return value
+- - used to implement events and callbacks
 
 ## Modifiers
-- abstract
+- abstract:
+- - used for inheritance
+- - abstract classes cannot have an object, they contain both abstract and non-abstract methods, and can have constructors, non-abstract methods in an abstract classes can be overridden if they are marked virtual
+- - Abstract methods cannot have an implementation in the abstract class
 - async
-- const
+- const:
 - event
 - extern
 - new
@@ -78,3 +83,8 @@ Constraints: where T : class, where T : struct, where T : new(), etc.
 ## Query Keywords
 - from, where, select, group, into, orderby, join, let
 - in, on, equals, by, ascending, descending
+
+| Interface | Abstract Class |
+| :--- | :--- |
+| cannot have method implementation | can have method implementation |
+| a class can inherit from multiple interfaces | a class can inherit from only one abstract class |
